@@ -1,4 +1,4 @@
-package com.springBoot.bankingSystem;
+package enums;
 
 public enum TransactionsEnum {
     DEPOSIT,
