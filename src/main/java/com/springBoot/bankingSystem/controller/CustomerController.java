@@ -19,7 +19,7 @@ public class CustomerController {
     public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer){
         return ResponseEntity.ok(this.customerService.createCustomer(customer));
     }
-    @GetMapping("{/id}")
+    @GetMapping(path = "{id}")
     public ResponseEntity<Customer> getCustomerById(@PathVariable Long id){
         return ResponseEntity.ok(this.customerService.findCustomerById(id));
     }
