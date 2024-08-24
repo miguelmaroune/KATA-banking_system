@@ -36,6 +36,8 @@ public class AuthService {
     }
 
     public String login(String username , String password){
+        // the authentication process will call the BankingUserDetailsService.loadUserByUsername which was overridden
+        // we then verify that the user trying to login exists in our DB , if so we return the spring security User object and add it to the context
         Authentication authentication = authenticationManager.authenticate(
           new UsernamePasswordAuthenticationToken(username,password)
         );

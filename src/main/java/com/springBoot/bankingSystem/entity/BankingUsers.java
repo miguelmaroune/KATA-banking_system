@@ -1,6 +1,6 @@
 package com.springBoot.bankingSystem.entity;
 
-import enums.RoleEnum;
+import com.springBoot.bankingSystem.enums.RoleEnum;
 import jakarta.persistence.*;
 import lombok.*;
 
