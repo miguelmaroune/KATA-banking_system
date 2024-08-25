@@ -1,6 +1,19 @@
 version: '3.8'
 
 services:
+  app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: bankingSystem-app
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/BANKING_SYSTEM
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: password
+    depends_on:
+      - db
   db:
     image: postgres
     container_name: banking_system_db
